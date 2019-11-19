@@ -12,7 +12,7 @@ import CTMediator
 public extension CTMediator{
     
     func B_viewControllerWithContext(context:String) -> UIViewController {
-        let p = ["context":context]
+        let p = ["context":context,kCTMediatorParamsKeySwiftTargetModuleName:"MainProject"]
         return self.performTarget("B", action: "viewController", params: p, shouldCacheTarget: false) as! UIViewController
     }
 }
